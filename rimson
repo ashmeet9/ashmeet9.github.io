@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <title> Rimson </title>
+    <link rel="icon" type="image/x-icon" href="./imgs/r.jpg"> 
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('yMNpHcl0cmcg58zCT');
+        })();
+    </script>
+    <script>
+
+function sendMail(e) {
+            e.preventDefault();
+            let fname = document.getElementById("fname").value;
+            let query = document.getElementById("query").value;
+            let mobile = document.getElementById("mobileName").value;
+            let email = document.getElementById("email").value;
+            var tempParams = {
+                from_name: fname,
+                email: email,
+                phone: mobile,
+                message: query
+            };
+            if (fname.length > 0 && query.length > 0 && mobile.length > 0 && email.length > 0) {
+                emailjs.send('service_ar3n2eq', 'template_822h99h', tempParams)
+                    .then(function(res) {
+                        console.log("Success", res.status);
+                    })
+                window.location.href = "#open-modal2";
+            } else {
+                console.log("inputs not filled");
+            }
+        }
+    </script>
+</head>
+
+<body> 
+    
+    <nav class="navbar">
+        <div class="navbar-container container">
+
+            <input type="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li>
+                    <a href="./rimson.html">Home</a>
+                </li>
+                <li>
+                    <a href="./products.html">Products</a>
+                </li>
+                <li>
+                    <a href="./offers.html">Offers</a>
+                </li>
+                <li>
+                    <a href="./aboutus.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./support.html">Support</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Contact-Us</a>
+                </li>
+            </ul>
+            <a href="./rimson.html">
+                <h1 class="logo"> <img src="./imgs/logo.png" alt="Rimson" width="250px" height="95.5px"> </h1> 
+            </a>
+
+        </div>
+    </nav>
+
+    <section class="showcase-area" id="showcase">
+
+        <div class="container showcase-container">
+            <h1 class="main-title">Time to create style</h1>
+            <p>Rimson - A priceless treasure, made with style</p>
+            <a href="#intro" class="btn btn-primary">Explore</a>
+        </div>
+
+    </section>
+
+    <section class="intro" id="intro">
+        <div class="container intro-container">
+            <h1>Rimson - Made with style</h1>
+            <p>Rimson creates premium, user-centric technology that challenges market conventions and the industry status quo. Founded in 2019 around the style mantra, Rimson consistently creates premium devices and software that provide the best user experience possible.
+                There is excellence in almost every way. Rimson phones have been delivering the best of expensive flagship devices for almost half the price, and they're simply unbeatable value.
+            </p>
+        </div>
+    </section>
+
+    <main class="featured">
+        <div class="container featured-container">
+            <h1>Featured specials</h1>
+            <p> Rimson is the sole mobile manufacturing company in India that offers exclusive style and excellence in every way.<br>
+                Our promise to perform responsibly
+                 as a leading, global company </p>
+        </div>
+
+        <section id="cardTour">
+
+            <div class="cardTour-container container">
+        
+                <div class="cardsT">
+                    <div class="cardT cardT--1">
+                        <div class="cardT__img"></div>
+                        <span class="cardT_link">
+                            <div class="cardT__img--hover"></div>
+                        </span>
+                        <div  class="cardT__info">
+                            <span class="cardT__category"> Rimson Plus</span>
+                            <h3 class="cardT__title"> Using pioneering high-precision lithography, the alluring tactile experience accurately conveys the rich texture of glass</h3>
+                            <span class="cardT__day">₹ 30000</span>
+                        </div>
+                    </div>
+        
+                    <!-- cardT -->
+        
+                    <div class="cardT cardT--2">
+                        <div class="cardT__img"></div>
+                        <span class="cardT_link">
+                            <div class="cardT__img--hover"></div>
+                        </span>
+                        <div class="cardT__info">
+                            <span class="cardT__category"> Rimson 13 </span>
+                            <h3 class="cardT__title"> With enhanced fingerprint resistance, dual textures blend a dynamic visual effect with a premium experience </h3>
+        
+                            <span class="cardT__day">₹ 44500</span>
+                        </div>
+                    </div>
+        
+        
+                    <!-- cardT -->
+        
+                    <div class="cardT cardT--3">
+                        <div class="cardT__img"></div>
+                        <span href="#" class="cardT_link">
+                            <div class="cardT__img--hover"></div>
+                        </span>
+                        <div class="cardT__info">
+                            <span class="cardT__category"> Rimson 10 </span>
+                            <h3 class="cardT__title">Push the boundaries with design engineered for pure speed</h3>
+                            <span class="cardT__day">₹ 22000</span>
+                        </div>
+                    </div>
+        
+        
+                    <!-- cardT -->
+        
+                    <div class="cardT cardT--4">
+                        <div class="cardT__img"></div>
+                        <span class="cardT_link">
+                            <div class="cardT__img--hover"></div>
+                        </span>
+                        <div class="cardT__info">
+                            <span class="cardT__category">Rimson Dual</span>
+                            <h3 class="cardT__title">A bold and seamless fusion of form and function, experience next-level fast and smooth view </h3>
+                            <span class="cardT__day"> ₹ 55000 </span>
+                        </div>
+                    </div>
+        
+                </div>
+        
+        </section>
+</main>        
+
+    <section class="information">
+        <div class="information-container container">
+            <div class="information-content">
+                <p>
+                    <b> News 18 Network: <br></b>Hold this in your hand and you get the distinct feeling that this is a well-built and premium phone </p><br>
+                <p>
+                    <b> The Verge : <br></b> Rimson Dual is a legitimate flagship phone that is genuinely competitive with the best android phones in the market </p><br>
+                <p>
+                    <b>International Business Times :<br></b> Rimson buds looks absolutely stunning, especially the bold Pink colour </p><br>
+                <p>
+                    <b>Gizbot: <br></b> The band is of extremely high quality rubber. It is also lightweight, comfortable, and can barely be felt on your hand</p>
+            </div>
+        
+
+        <div class="information-container container" style="margin-top: 7rem;">
+            <div class="information-content img">
+                <br>
+                <p>
+                    <b>Business Insider : <br></b> Rimson stands out for many features. It is gaining more importance in the upcoming years.</p><br>
+                <p>
+                    <b>IGyaan: <br></b> It is one of the most responsive touch panels I have used on a budget fitness tracker which enhances your user experience from a budget fitness band. </p><br>
+                <p>
+                    <b>editorji : <br></b> The Rimson 13 shines on both fronts that is gaming and performance </p>
+            </div>
+            <div class="enquiry img">
+                <img src="./imgs/pink.jpg" alt="phone image">
+            </div>
+        </div>
+    </section>
+
+    <!-- card tours -->
+
+   <section id="cardTour">
+
+        <div class="cardTour-container container">
+
+            <div class="cardsT">
+                <div class="cardT cardT--5">
+                    <div class="cardT__img"></div>
+                    <span class="cardT_link">
+                        <div class="cardT__img--hover"></div>
+                    </span>
+                    <div  class="cardT__info">
+                        <span class="cardT__category"> Rimson pro</span>
+                        <h3 class="cardT__title"> A little more than you expect</h3>
+                        <span class="cardT__day">₹ 12999</span>
+                    </div>
+                </div>
+
+                <!-- cardT -->
+
+                <div class="cardT cardT--6">
+                    <div class="cardT__img"></div>
+                    <span class="cardT_link">
+                        <div class="cardT__img--hover"></div>
+                    </span>
+                    <div class="cardT__info">
+                        <span class="cardT__category"> Rim Note 7</span>
+                        <h3 class="cardT__title">Outstanding performance, stability, and detail - with reduced noise </h3>
+
+                        <span class="cardT__day">₹ 19800</span>
+                    </div>
+                </div>
+
+
+                <!-- cardT -->
+
+                <div class="cardT cardT--7">
+                    <div class="cardT__img"></div>
+                    <span href="#" class="cardT_link">
+                        <div class="cardT__img--hover"></div>
+                    </span>
+                    <div class="cardT__info">
+                        <span class="cardT__category"> Rimson 10 </span>
+                        <h3 class="cardT__title">Push the boundaries with design engineered for pure speed</h3>
+                        <span class="cardT__day">₹ 22000</span>
+                    </div>
+                </div>
+
+
+                <!-- cardT -->
+
+                <div class="cardT cardT--8">
+                    <div class="cardT__img"></div>
+                    <span class="cardT_link">
+                        <div class="cardT__img--hover"></div>
+                    </span>
+                    <div class="cardT__info">
+                        <span class="cardT__category">Rimson Flip</span>
+                        <h3 class="cardT__title">A super-strong, lightweight Armor Aluminum frame is the backbone of this incredible phone </h3>
+                        <span class="cardT__day"> ₹ 47980</span>
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+
+     <!-- <footer id="footer">
+        <div class="container">
+            <h2>Rimson &copy; 2022, all rights reserved. <br> Made by Ashmeet Kaur </h2>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to Top"><i class='fas fa-angle-up'></i></button>
+    </footer> -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="fbox-container container">
+
+
+            <div class="fbox">
+                <h3><img src="./imgs/r.jpg" width="170px" height="150px" > </h3>
+                <p>Rimson is committed to complying with local laws and regulations as well as applying a strict global code of conduct to all employees. It believes that ethical management is not only a tool for responding to the rapid changes in the global business environment, but also a vehicle for building trust with its various stakeholders including customers, shareholders, employees, business partners and local communities.</p>
+            </div>
+            
+            
+            <div class="fbox">
+                <br><br><br>
+                <h3>Contact Info</h3>
+                <a class="links link"> <i class="fas fa-phone"></i>+91 9876543210</a>
+                <a class="links link"> <i class="fas fa-phone"></i>+245-839-2222</a>
+                <a class="links link"> <i class="fas fa-envelope"></i>ashmeet@gmail.com</a>
+                <a class="links link"> <i class="fas fa-map-marker-alt"></i>India - 110027</a>
+                <a href="./contact.html" class="links link"> <i class="fas fa-address-book"></i>Contact Us</a>
+                <div class="share">
+                    <br> <a href="https://www.linkedin.com/in/ashmeet-kaur-5895b9202/" class="fab fa-linkedin"></a>
+                 </div>
+            </div>
+
+
+        </div>
+
+        <div class="credit"> Made by <br> <span> Ashmeet Kaur </span> <br> | Rimson &copy; 2022 All Rights Reserved |</div>
+
+    </section>
+    </body>
+    </html>
+
+
